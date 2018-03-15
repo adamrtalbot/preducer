@@ -1,0 +1,11 @@
+Package: preducer
+Type: Package
+Title: Reduces p-values across a dataframe by grouping variable
+Version: 0.1.0
+Author: Adam Talbot
+Maintainer: Adam Talbot <talbot.a.r@gmail.com>
+Description: A function for reducing p-values using Fisher's method across a dataframe, per a grouping variable.
+License: Do what the frick you want.
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
