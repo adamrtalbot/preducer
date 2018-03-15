@@ -15,7 +15,7 @@ fishers_method <- function(data, p_value, group){
   data <- split(x = data, f = data[,group])
   
   # Load metap library
-  if(!require(metap)){
+  if(!require(metap, quietly = TRUE)){
     stop("This function requires package 'metap' (install.packages('metap')")
   }
   
@@ -25,7 +25,7 @@ fishers_method <- function(data, p_value, group){
     if(nrow(data) < 2){
       new_p <- data[1,"Adjusted.p.value..BH."]
     } else {
-      new_p <- as.numeric(sumlog(data[,"Adjusted.p.value..BH."])[3])
+      new_p <- as.numeric(metap::sumlog(data[,"Adjusted.p.value..BH."])[3])
     }
     new_p
   }
